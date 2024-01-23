@@ -31,9 +31,20 @@ while (true)
         case "3":
             Console.WriteLine("You chose to delete a contact.");
             Console.WriteLine("Write a number to delete contact.");
-            int delete = int.Parse(Console.ReadLine());
-            contacts.RemoveAt(delete);
-            Console.WriteLine("Successfully deleted.");
+            try
+            {
+                int delete = int.Parse(Console.ReadLine());
+                contacts.RemoveAt(delete);
+                Console.WriteLine("Successfully deleted.");
+            }
+            catch (FormatException error)
+            {
+                Console.WriteLine("Invalid input. Please enter a number. Error: " + error.Message);
+            }
+            catch (ArgumentOutOfRangeException error)
+            {
+                Console.WriteLine("Invalid index. Please try again. Error: " + error.Message);
+            }
             break;
         case "4":
             Console.WriteLine("Exiting the program...");

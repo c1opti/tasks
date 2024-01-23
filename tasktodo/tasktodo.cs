@@ -24,12 +24,12 @@ while (true)
             {
                 case "1":
                 case "completed":
-                    task = ($"{i}. Task: {name} Ready: completed.");
+                    task = $"{i}. Task: {name} Ready: completed.";
                     tasks.Add(task);
                     break;
                 case "2":
                 case "not completed":
-                    task = ($"{i}. Task: {name} Ready: not completed.");
+                    task = $"{i}. Task: {name} Ready: not completed.";
                     tasks.Add(task);
                     break;
                 default:
@@ -59,10 +59,9 @@ while (true)
             }
             catch (ArgumentOutOfRangeException error)
             {
-                Console.WriteLine("Invalid index. Please enter a valid task number. Error: " + error.Message);
+                Console.WriteLine("Invalid index. Please try again. Error: " + error.Message);
             }
             break;
-
         case "4":
             Console.WriteLine("Exiting the program...");
             return;
