@@ -25,7 +25,7 @@
         {
             dename = name + " JUSTIN";
             deage = age + 10;
-            degrades = grades;
+            degrades = grades; // crazy shit.
         }
         public void Print()
         {
