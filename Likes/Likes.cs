@@ -14,7 +14,7 @@ public static class Likes
         }
         else if (name.Length == 2)
         {
-            return $"{name[0]} and {name[0]} like this";
+            return $"{name[0]} and {name[1]} like this";
         }
         else if (name.Length == 3)
         {
